@@ -1,0 +1,44 @@
+{
+  "name": "Kit",
+  "version": "1.0.0",
+  "description": "Indiekit server for https://chrisfinazzo.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "indiekit serve"
+  },
+  "keywords": [
+    "indiekit",
+    "indieweb"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "20"
+  },
+  "type": "module",
+  "indiekit": {
+    "plugins": [
+      "@indiekit/preset-jekyll",
+      "@indiekit/store-github",
+      "@indiekit/syndicator-mastodon"
+    ],
+    "publication": {
+      "me": "https://chrisfinazzo.com"
+    },
+    "@indiekit/store-github": {
+      "user": "chrisfinazzo",
+      "repo": "blog",
+      "branch": "main"
+    },
+    "@indiekit/syndicator-mastodon": {
+      "url": "mastodon.social",
+      "user": "chrisfinazzo"
+    }
+  },
+  "dependencies": {
+    "@indiekit/indiekit": "^1.0.0-beta.17",
+    "@indiekit/preset-jekyll": "^1.0.0-beta.15",
+    "@indiekit/store-github": "^1.0.0-beta.15",
+    "@indiekit/syndicator-mastodon": "^1.0.0-beta.16"
+  }
+}
